@@ -271,7 +271,6 @@ body::-webkit-scrollbar {
     font-size: 88px;
     font-weight: 700;
     line-height: 88px;
-    /* 100% */
     right: 150px;
 }
 
@@ -308,7 +307,6 @@ body::-webkit-scrollbar {
     font-weight: 700;
     line-height: 40px;
     margin-bottom: 30px;
-    /* 160% */
 }
 
 .service_item > p {
@@ -322,4 +320,63 @@ body::-webkit-scrollbar {
 
 .service_item:hover{
     transform: translateY(-5px);
+}
+
+.skill_header {
+    position: relative;
+    left: 150px;
+    margin-top: 150px;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 88px;
+    /* 100% */
+}
+
+.main_skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0px;
+    margin: 175px;
+}
+
+.skill_container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.skill_container > p {
+    position: absolute;
+    color: #956BBE;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 48px; /* 137.143% */
+    opacity: 0.5;
+}
+
+.skill_git{
+    top: 30px;
+    left: 200px;
+}
+
+.skill_hibernate{
+    top: 500px;
+    right: 250px;
+}
+
+.skill_figma{
+    top: 0px;
+    right: 150px;
+}
+
+.skill_opencv{
+    top: 50px;
+    right: 750px;
+}
+
+.skill_mysql{
+    top: 450px;
+    left: 130px;
 }
