@@ -3,14 +3,8 @@
     src: url(../font/Outfit-VariableFont.ttf);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 html, body {
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 body {
@@ -62,4 +56,124 @@ body::-webkit-scrollbar {
     line-height: 32px;
     text-decoration: none;
     margin: 15px;
+}
+
+.heading > span {
+    color: #FFF;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 56px;
+}
+
+.heading {
+    width: 353px;
+    height: 230px;
+    flex-shrink: 0;
+}
+
+.heading > div {
+    color: #FFF;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 88px;
+    /* 100% */
+}
+
+.details {
+    padding: 30px;
+    width: 330px;
+    height: 170px;
+    border-left: #956BBE 5px solid;
+}
+
+.details > p {
+    color: #6B6870;
+    font-family: Outfit;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.card {
+    width: 550px;
+    height: 380px;
+    margin: 0 auto;
+    background-color: #303030;
+    border-radius: 20px;
+    z-index: 1;
+    box-shadow: 15px 15px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+}
+
+.circle {
+    padding: 0 4px;
+}
+
+.box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: #ff605c;
+}
+
+.yellow {
+    background-color: #ffbd44;
+}
+
+.green {
+    background-color: #00ca4e;
+}
+
+.code_area {
+    position: absolute;
+    top: 250px;
+    right: 110px;
+}
+
+.card__content {
+    color: #A37EC6;
+    font-family: Outfit;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 30px 35px;
+}
+
+.background_img {
+    max-width: 100%;
+    width: 60%;
+    position: absolute;
+    height: 800px;
+    top: 0px;
+    right: 0px;
+}
+
+.social_links {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    right: 20px;
+    top: 270px;
+}
+
+.social_links > a {
+    margin: 8px;
+}
+
+.home_details {
+    margin: 190px 20px 200px 80px;
+    display: grid;
+    gap: 40px;
 }
