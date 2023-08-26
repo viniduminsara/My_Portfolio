@@ -337,7 +337,7 @@ body::-webkit-scrollbar {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 30px 0px;
+    padding: 30px 0;
     margin: 175px;
 }
 
@@ -352,7 +352,7 @@ body::-webkit-scrollbar {
     color: #956BBE;
     font-size: 35px;
     font-weight: 700;
-    line-height: 48px; /* 137.143% */
+    line-height: 48px;
     opacity: 0.5;
 }
 
@@ -367,7 +367,7 @@ body::-webkit-scrollbar {
 }
 
 .skill_figma{
-    top: 0px;
+    top: 0;
     right: 150px;
 }
 
@@ -379,4 +379,51 @@ body::-webkit-scrollbar {
 .skill_mysql{
     top: 450px;
     left: 130px;
+}
+
+.project_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 300px;
+}
+
+.project_header > div {
+    position: relative;
+    color: #FFF;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 88px;
+    /* 100% */
+    right: 150px;
+}
+
+.project_header > img {
+    position: relative;
+    left: 70px;
+}
+
+.project_panel{
+    margin-top: 65px;
+    margin-bottom: 45px;
+}
+
+.project_panel_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.project_panel_row > img{
+    margin: 10px;
+}
+
+.project_link{
+    display: block;
+    color: #FF718A;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 40px;
+    text-decoration: none;
+    text-align: center;
 }
