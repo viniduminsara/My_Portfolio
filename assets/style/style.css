@@ -427,3 +427,44 @@ body::-webkit-scrollbar {
     text-decoration: none;
     text-align: center;
 }
+
+.assignment_header{
+    position: relative;
+    left: 150px;
+    margin-top: 150px;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 88px;
+    margin-top: 150px;
+}
+
+.assignment_panel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 65px;
+    margin-bottom: 45px;
+}
+
+.assignment_panel_row > div{
+    margin: 20px;
+}
+
+.assignment_panel_row > div > p{
+    text-align: center;
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 40px; /* 142.857% */
+    margin-top: 10px;
+}
+
+.assignment_link{
+    display: block;
+    color: #FF718A;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 40px; /* 142.857% */
+    text-decoration: none;
+    text-align: center;
+}
