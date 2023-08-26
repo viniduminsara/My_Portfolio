@@ -268,25 +268,44 @@
         </section>
 
         <!-- contact me section -->
-        <section id="contact me">
-            <h1>Contact Me</h1>
+        <section id="contact_me">
+            <div class="contactme_header">Contact Me</div>
             <img src="assets/img/eclipse_group.png" alt="eclipse group">
-            <div>
+            <div class="contact_form">
                 <form action="#">
-                    <label for="name">Full name *</label><br>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    <br>
+                    <div class="form_input">
+                        <label for="name">Full name *</label><br>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" class="input" required>
+                        <span class="input-border"></span>
+                        <br>
+                    </div>
+                    <div class="form_input">
+                        <label for="email">Email *</label><br>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" class="input" required>
+                        <span class="input-border"></span>
+                        <br>
+                    </div>
 
-                    <label for="email">Email *</label><br>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    <br>
-
-                    <label for="message">Message *</label><br>
-                    <textarea name="message" id="message" cols="30" rows="6" placeholder="Enter your message" required>
-                    </textarea>
-                    <br>
-
-                    <button type="submit">Send</button>
+                    <div class="form_input">
+                        <label for="message">Message *</label><br>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message"
+                                  class="input" required></textarea>
+                        <span class="input-border"></span>
+                        <br>
+                    </div>
+                    <button type="submit">
+                        <span>Send</span>
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor"
+                                          d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </button>
                 </form>
             </div>
         </section>

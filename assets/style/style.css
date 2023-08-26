@@ -468,3 +468,128 @@ body::-webkit-scrollbar {
     text-decoration: none;
     text-align: center;
 }
+
+.contactme_header{
+    color: #FFF;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 88px; /* 100% */
+    text-align: center;
+    margin-top: 150px;
+}
+
+#contact_me > img{
+    position: absolute;
+    right: 0px;
+    rotate: 90deg;
+}
+
+.contact_form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 70px 0 150px 0;
+}
+
+.form_input {
+    position: relative;
+    width: 760px;
+    margin: 25px 0;
+}
+/* styling of Input */
+.input {
+    color: #9D9A9F;
+    font-size: 0.9rem;
+    background-color: rgba(74, 42, 104, 0.25);
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Outfit;
+    padding: 15px;
+    border: none;
+    resize: none;
+}
+/* styling of animated border */
+.input-border {
+    position: absolute;
+    background: #7B46AE;
+    width: 0%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+.input:focus {
+    outline: none;
+}
+/*code of animated border */
+.input:focus ~ .input-border {
+    width: 100%;
+}
+
+.form_input > label{
+    color: #FFF;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 32px; /* 139.13% */
+}
+
+button {
+    font-family: Outfit;
+    font-size: 18px;
+    background: #FF4D6D;
+    color: white;
+    padding: 0.8em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button span {
+    display: block;
+    margin-left: 0.4em;
+    transition: all 0.3s;
+    margin-right: 10px;
+}
+
+button svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: all 0.3s;
+}
+
+button .svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0.5em;
+    transition: all 0.3s;
+}
+
+button:hover .svg-wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+button:hover svg {
+    transform: rotate(45deg);
+}
