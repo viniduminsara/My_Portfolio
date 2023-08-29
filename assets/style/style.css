@@ -326,8 +326,7 @@ body::-webkit-scrollbar {
 
 .service_item > p {
     color: #6B6870;
-    font-size: 18px;
-    font-style: normal;
+    font-size: 20px;
     font-weight: 200;
     line-height: 30px;
     text-align: justify;
@@ -694,6 +693,23 @@ footer{
     .about_me_header{
         left: 350px;
     }
+
+    /* services section */
+
+    .service_item {
+        width: 300px;
+        margin: 80px 8px;
+    }
+
+    .service_item > div{
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .service_item > p{
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 
 
@@ -792,6 +808,23 @@ footer{
 
     .about_me_eg {
         top: 750px;
+    }
+
+    /* services section */
+
+    .service_item {
+        width: 250px;
+        height: 550px;
+        margin: 80px 5px;
+        padding: 20px;
+    }
+
+    .service_item > div{
+        font-size: 26px;
+    }
+
+    .service_item > p{
+        font-size: 16px;
     }
 }
 
@@ -922,6 +955,34 @@ footer{
     .aboutMe_container{
         margin-top: 150px;
     }
+
+    /* services section */
+    .services_container{
+        flex-direction: column;
+    }
+
+    .service_item {
+        width: 380px;
+        height: 450px;
+        margin: 30px 5px;
+        padding: 25px;
+    }
+
+    .service_header{
+        position: relative;
+    }
+
+    .service_header > div{
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        font-size: 60px;
+    }
+
+    .service_header > img{
+        display: none;
+    }
+
 }
 
 @media all and (max-width: 470px){
@@ -1018,6 +1079,14 @@ footer{
 
     .project_count{
         margin-left: 30px;
+    }
+
+    /* services section */
+    .service_item {
+        width: 250px;
+        height: 450px;
+        margin: 20px 5px;
+        padding: 25px;
     }
 }
 
