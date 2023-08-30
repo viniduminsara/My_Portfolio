@@ -113,6 +113,19 @@ body::-webkit-scrollbar {
     border-radius: 20px;
     z-index: 1;
     box-shadow: 15px 15px 8px 0 rgba(0, 0, 0, 0.3);
+    animation: card ease 2s infinite;
+}
+
+@keyframes card {
+    0% {
+        transform: translateY(-2px);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+    100% {
+        transform: translateY(-2px);
+    }
 }
 
 .tools {
@@ -179,7 +192,39 @@ body::-webkit-scrollbar {
 }
 
 .social_links > a {
+    position: relative;
     margin: 8px;
+    width: 45px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    border: 2px solid black;
+    transition: all 0.2s ease;
+}
+
+.social_links > a > svg{
+    width: 45px;
+    aspect-ratio: 1/1;
+    fill: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.social_links > a:hover{
+    border: none;
+    transform: scale(1.25);
+    background-color: #1a1e22;;
+}
+
+.social_links > a:hover > svg{
+    fill: white;
+}
+
+.social_links > a:active{
+    transform: scale(0.95);
 }
 
 .home_details {
@@ -309,6 +354,7 @@ body::-webkit-scrollbar {
     height: 500px;
     margin: 80px 10px;
     padding: 30px;
+    transition: 0.5s ease;
 }
 
 .service_item > img {
@@ -333,7 +379,8 @@ body::-webkit-scrollbar {
 }
 
 .service_item:hover{
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgb(147, 35, 190);
 }
 
 .skill_header {
@@ -429,7 +476,7 @@ body::-webkit-scrollbar {
 }
 
 .project_panel_row > img{
-    margin: 10px;
+
 }
 
 .project_link{
@@ -440,6 +487,75 @@ body::-webkit-scrollbar {
     line-height: 40px;
     text-decoration: none;
     text-align: center;
+}
+
+.project_card{
+    position: relative;
+    margin: 10px;
+    height: 297px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 0.2s ease-in;
+}
+
+.project_panel_row:first-child .project_card:first-child{
+    width: 610px;
+    background-image: url("../img/project01_image.svg");
+}
+
+.project_panel_row:first-child .project_card:nth-child(2){
+    width: 488px;
+    background-image: url("../img/project_2.svg");
+}
+
+.project_panel_row:nth-child(2) .project_card:first-child{
+    width: 488px;
+    background-image: url("../img/project_3.svg");
+}
+
+.project_panel_row:nth-child(2) .project_card:nth-child(2){
+    width: 610px;
+    background-image: url("../img/project_4.svg");
+}
+
+.card_content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #b79dd1;
+    opacity: 85%;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.4s ease-in;
+}
+
+.card_content > a{
+    text-decoration: none;
+    color: #4A2A68;
+}
+
+.card_title{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.card_description{
+    font-weight: 200;
+}
+
+.project_card:hover{
+    transform: scale(1.025);
+}
+
+.project_card:hover .card_content {
+    transform: rotateX(0deg);
 }
 
 .assignment_header{
@@ -733,7 +849,7 @@ footer{
 
     .social_links {
         right: 10px;
-        top: 295px;
+        top: 305px;
     }
 
     .social_links > a {
@@ -838,7 +954,7 @@ footer{
     /* Home section */
     .code_area{
         top: 280px;
-        right: 60px;
+        right: 70px;
     }
 
     .card{
@@ -848,11 +964,7 @@ footer{
 
     .social_links {
         right: 5px;
-        top: 310px;
-    }
-    .social_links > a > img{
-        width: 38px;
-        aspect-ratio: 1/1;
+        top: 290px;
     }
 
     .home_details {
@@ -916,7 +1028,7 @@ footer{
 
     .social_links {
         right: 10px;
-        top: 205px;
+        top: 185px;
     }
 
     /* About me section */
@@ -1013,12 +1125,17 @@ footer{
     }
 
     .social_links {
-        right: 5px;
+        right: 3px;
         top: 200px;
     }
 
-    .social_links > a > img{
+    .social_links > a{
         width: 30px;
+    }
+
+    .social_links > a > svg {
+        height: 15px;
+        width: auto;
     }
 
     .heading{
@@ -1093,7 +1210,7 @@ footer{
 @media all and (max-width: 320px){
     /* Home section */
     .code_area{
-        right: 45px;
+        right: 50px;
     }
 
     .card{
@@ -1108,8 +1225,8 @@ footer{
     }
 
     .social_links {
-        right: 5px;
-        top: 195px;
+        right: 3px;
+        top: 185px;
     }
 
     .social_links > a > img{
