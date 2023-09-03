@@ -455,7 +455,6 @@ body::-webkit-scrollbar {
     font-size: 88px;
     font-weight: 700;
     line-height: 88px;
-    /* 100% */
     right: 150px;
 }
 
@@ -938,6 +937,47 @@ footer{
     .service_item > p{
         font-size: 16px;
     }
+
+    /* project section */
+    .project_card{
+        height: 200px;
+    }
+
+    .project_panel_row:first-child .project_card:first-child{
+        width: 400px;
+    }
+
+    .project_panel_row:first-child .project_card:nth-child(2){
+        width: 340px;
+    }
+
+    .project_panel_row:nth-child(2) .project_card:first-child{
+        width: 340px;
+    }
+
+    .project_panel_row:nth-child(2) .project_card:nth-child(2){
+        width: 400px;
+    }
+
+    .card_content {
+        padding: 10px;
+    }
+
+    .card_title{
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+    }
+
+    .card_description{
+        font-size: 12px;
+    }
+
+    .project_header > img{
+        opacity: 0;
+        width: 0;
+    }
+
 }
 
 @media all and (max-width: 950px){
@@ -1151,6 +1191,35 @@ footer{
         left: 100px;
     }
 
+    /* project section */
+
+    .project_panel_row{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project_panel_row:first-child .project_card:nth-child(2){
+        width: 400px;
+    }
+
+    .project_panel_row:nth-child(2) .project_card:first-child{
+        width: 400px;
+    }
+
+    .project_header > div{
+        font-size: 60px;
+        line-height: 70px;
+        right: 50px;
+    }
+
+    .project_header{
+        margin-top: 150px;
+    }
+
+    .project_link{
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 
 @media all and (max-width: 610px){
@@ -1327,6 +1396,32 @@ footer{
     .skill_container{
         display: none;
     }
+
+    /* project section */
+    .project_card{
+        margin: 5px;
+    }
+
+    .project_panel_row:first-child .project_card:first-child{
+        width: 300px;
+    }
+
+    .project_panel_row:first-child .project_card:nth-child(2){
+        width: 300px;
+    }
+
+    .project_panel_row:nth-child(2) .project_card:first-child{
+        width: 300px;
+    }
+
+    .project_panel_row:nth-child(2) .project_card:nth-child(2){
+        width: 300px;
+    }
+
+    .project_header > div{
+        right: 30px;
+    }
+
 }
 
 @media all and (max-width: 320px){
