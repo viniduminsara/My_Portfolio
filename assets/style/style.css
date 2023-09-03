@@ -414,7 +414,7 @@ body::-webkit-scrollbar {
     font-size: 35px;
     font-weight: 700;
     line-height: 48px;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 .skill_git{
@@ -434,7 +434,7 @@ body::-webkit-scrollbar {
 
 .skill_opencv{
     top: 50px;
-    right: 750px;
+    left: 500px;
 }
 
 .skill_mysql{
@@ -473,10 +473,6 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-
-.project_panel_row > img{
-
 }
 
 .project_link{
@@ -998,6 +994,29 @@ footer{
     .background_img {
         height: 700px;
     }
+
+    /* Skill section */
+    .main_skills > img{
+        width: 150px;
+        aspect-ratio: 1/1;
+        margin: 20px;
+    }
+
+    .main_skills > img:nth-child(2){
+        width: 100px;
+        aspect-ratio: 1/1;
+    }
+
+    .skill_container > p {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+    }
+
+    .skill_opencv{
+        top: 50px;
+        left: 350px;
+    }
 }
 
 @media all and (max-width: 768px) {
@@ -1095,6 +1114,84 @@ footer{
         display: none;
     }
 
+    /* service section */
+
+    .main_skills > img{
+        margin: 10px;
+    }
+
+    .skill_header{
+        font-size: 72px;
+        line-height: 80px;
+        left: 100px;
+    }
+
+    .skill_git{
+        top: 30px;
+        left: 100px;
+    }
+
+    .skill_hibernate{
+        top: 450px;
+        right: 200px;
+    }
+
+    .skill_figma{
+        top: 0;
+        right: 125px;
+    }
+
+    .skill_opencv{
+        top: 50px;
+        left: 250px;
+    }
+
+    .skill_mysql{
+        top: 400px;
+        left: 100px;
+    }
+
+}
+
+@media all and (max-width: 610px){
+    /* skill section */
+    .main_skills > img{
+        width: 100px;
+    }
+
+    .main_skills > img:nth-child(2){
+        width: 75px;
+    }
+
+    .skill_container > p {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .skill_git{
+        top: 30px;
+        left: 50px;
+    }
+
+    .skill_hibernate{
+        top: 450px;
+        right: 150px;
+    }
+
+    .skill_figma{
+        top: 0;
+        right: 100px;
+    }
+
+    .skill_opencv{
+        top: 50px;
+        left: 175px;
+    }
+
+    .skill_mysql{
+        top: 400px;
+        left: 50px;
+    }
 }
 
 @media all and (max-width: 470px){
@@ -1204,6 +1301,31 @@ footer{
         height: 450px;
         margin: 20px 5px;
         padding: 25px;
+    }
+
+    /* skill section */
+    .main_skills{
+        flex-direction: column;
+        margin: 50px 50px 0 50px;
+    }
+
+    .main_skills > img{
+        width: 200px;
+        margin: 30px;
+    }
+
+    .main_skills > img:nth-child(2){
+        width: 150px;
+    }
+
+    .skill_header{
+        font-size: 60px;
+        line-height: 72px;
+        left: 30px;
+    }
+
+    .skill_container{
+        display: none;
     }
 }
 
