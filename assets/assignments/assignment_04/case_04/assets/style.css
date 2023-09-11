@@ -1,0 +1,23 @@
+div{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 100%;
+    border: blue solid 3px;
+    animation: animation 2s infinite;
+}
+
+@keyframes animation {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(3);
+        opacity: 0;
+    }
+}

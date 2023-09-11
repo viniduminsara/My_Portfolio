@@ -1,0 +1,42 @@
+nav{
+    position: absolute;
+    height: fit-content;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+div{
+    width: 250px;
+    height: 80px;
+    color: white;
+    background-color: #7500e5;
+    margin: 50px 0;
+    position: relative;
+    right: 200px;
+    transition: all 0.7s ease-in;
+    box-shadow: #8473af 5px 5px 10px;
+}
+
+div > h3{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto;
+    height: fit-content;
+}
+
+div > i{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    margin: auto;
+    height: fit-content;
+}
+
+div:hover{
+    transform: translateX(200px);
+    cursor: pointer;
+}
