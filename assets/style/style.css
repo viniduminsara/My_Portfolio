@@ -579,7 +579,7 @@ body::-webkit-scrollbar {
     border-radius: 20px;
     background: #ffffff00;
     position: relative;
-    padding: 1.8rem;
+    padding: 1.0rem;
     border: 2px solid rgba(255, 113, 138, 0.7);
     transition: 0.5s ease-out;
     overflow: visible;
@@ -612,7 +612,7 @@ body::-webkit-scrollbar {
 
 .assignment_container:hover {
     border-color: #7B46AE;
-    box-shadow: 10px 5px 18px 0 rgba(55, 5, 84, 0.87);
+    box-shadow: 0 0 18px 0 rgba(55, 5, 84, 0.87);
 }
 
 .assignment_container:hover .card-description {
@@ -1094,6 +1094,17 @@ footer{
         top: 50px;
         left: 350px;
     }
+
+    /* assignment section */
+    .assignment_header{
+        left: 100px;
+    }
+
+    .assignment_container {
+        width: 300px;
+        height: 200px;
+        margin: 15px;
+    }
 }
 
 @media all and (max-width: 768px) {
@@ -1254,6 +1265,23 @@ footer{
     }
 
     .project_link{
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    /* assignment section */
+    .assignment_header{
+        left: 75px;
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    .assignment_panel_row{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .assignment_link{
         font-size: 20px;
         line-height: 28px;
     }
@@ -1459,6 +1487,23 @@ footer{
         right: 30px;
     }
 
+    /* assignment section */
+    .assignment_header{
+        left: 20px;
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .assignment_container {
+        width: 270px;
+        height: 190px;
+        margin: 10px;
+    }
+
+    .assignment_link{
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 
 @media all and (max-width: 320px){
@@ -1485,5 +1530,10 @@ footer{
 
     .social_links > a > img{
         width: 25px;
+    }
+
+    /* assignment section */
+    .assignment_header{
+        left: 10px;
     }
 }
