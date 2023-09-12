@@ -694,7 +694,7 @@ body::-webkit-scrollbar {
     line-height: 32px;
 }
 
-button {
+form > button {
     font-size: 18px;
     background: #FF4D6D;
     color: white;
@@ -1015,6 +1015,10 @@ footer{
         width: 0;
     }
 
+    /* contact me section */
+    #contact_me > img{
+        display: none;
+    }
 }
 
 @media all and (max-width: 950px){
@@ -1104,6 +1108,11 @@ footer{
         width: 300px;
         height: 200px;
         margin: 15px;
+    }
+
+    /* contact me section */
+    .form_input{
+        width: 650px;
     }
 }
 
@@ -1285,6 +1294,23 @@ footer{
         font-size: 20px;
         line-height: 28px;
     }
+
+    /* contact me section */
+
+    .contactme_header{
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    .form_input{
+        width: 550px;
+    }
+
+    .form_input > label{
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 26px;
+    }
 }
 
 @media all and (max-width: 610px){
@@ -1326,6 +1352,23 @@ footer{
         top: 400px;
         left: 50px;
     }
+
+    /* contact me section */
+
+    .form_input{
+        width: 400px;
+    }
+
+    input{
+        height: 40px;
+    }
+
+    form > button{
+        width: 100px;
+        height: 50px;
+        font-size: 14px;
+    }
+
 }
 
 @media all and (max-width: 470px){
@@ -1503,6 +1546,12 @@ footer{
     .assignment_link{
         font-size: 20px;
         line-height: 28px;
+    }
+
+    /* contact me section */
+
+    .form_input{
+        width: 280px;
     }
 }
 
