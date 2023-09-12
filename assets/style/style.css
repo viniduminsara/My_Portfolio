@@ -694,7 +694,7 @@ body::-webkit-scrollbar {
     line-height: 32px;
 }
 
-form > button {
+button {
     font-size: 18px;
     background: #FF4D6D;
     color: white;
@@ -782,6 +782,39 @@ footer{
 .footer_col1 > div > a{
     text-decoration: none;
     margin: 20px;
+}
+
+.footer_col1 > div > a > svg{
+    fill: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.footer_col1 > div > a > svg:hover{
+    transform: scale(1.4);
+}
+
+.footer_col1 > div > a > svg:active{
+    transform: scale(0.9);
+}
+
+.footer_col1 > div > a:first-child > svg:hover{
+    fill: #d62976;
+}
+
+.footer_col1 > div > a:nth-child(2) > svg:hover{
+    fill: #0072b1;
+}
+
+.footer_col1 > div > a:nth-child(3) > svg:hover{
+    fill: #0147f8;
+}
+
+.footer_col1 > div > a:nth-child(4) > svg:hover{
+    fill: #000000;
+}
+
+.footer_col1 > div > a:nth-child(5) > svg:hover{
+    fill: #128C7E;
 }
 
 .footer_col2{
@@ -1019,6 +1052,9 @@ footer{
     #contact_me > img{
         display: none;
     }
+
+    /* footer */
+
 }
 
 @media all and (max-width: 950px){
