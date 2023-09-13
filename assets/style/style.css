@@ -57,6 +57,15 @@ body::-webkit-scrollbar {
     line-height: 32px;
     text-decoration: none;
     margin: 15px;
+    transition: all 0.3s ease;
+}
+
+.nav_links > .active{
+    color: #FFFFFF;
+}
+
+.nav_links > a:hover{
+    color: #FFFFFF;
 }
 
 .menu-btn {
