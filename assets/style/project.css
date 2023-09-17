@@ -57,6 +57,23 @@ body::-webkit-scrollbar {
     line-height: 32px;
     text-decoration: none;
     margin: 15px;
+    transition: all 0.3s ease;
+}
+
+.nav_links > .active{
+    color: #FFFFFF;
+}
+
+.nav_links > a:hover{
+    color: #FFFFFF;
+}
+
+.menu-btn {
+    display: none;
+    color: #8859B6;
+    font-size: 24px;
+    margin: 0 20px;
+    cursor: pointer;
 }
 
 .heading_container{
@@ -167,13 +184,44 @@ footer{
 .footer_col1 > div{
     margin-left: 50px;
     margin-top: 30px;
-    /* display: flex;
-    justify-content: space-between; */
 }
 
 .footer_col1 > div > a{
     text-decoration: none;
     margin: 20px;
+}
+
+.footer_col1 > div > a > svg{
+    fill: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.footer_col1 > div > a > svg:hover{
+    transform: scale(1.4);
+}
+
+.footer_col1 > div > a > svg:active{
+    transform: scale(0.9);
+}
+
+.footer_col1 > div > a:first-child > svg:hover{
+    fill: #d62976;
+}
+
+.footer_col1 > div > a:nth-child(2) > svg:hover{
+    fill: #0072b1;
+}
+
+.footer_col1 > div > a:nth-child(3) > svg:hover{
+    fill: #0147f8;
+}
+
+.footer_col1 > div > a:nth-child(4) > svg:hover{
+    fill: #000000;
+}
+
+.footer_col1 > div > a:nth-child(5) > svg:hover{
+    fill: #128C7E;
 }
 
 .footer_col2{
@@ -213,4 +261,152 @@ footer{
     font-size: 23px;
     font-weight: 300;
     line-height: 32px;
+}
+
+@media all and (max-width: 1150px){
+    /* footer */
+    .footer_col1 > h2{
+        font-size: 50px;
+        line-height: 66px;
+    }
+
+    .footer_col1 > div > a{
+        margin: 15px;
+    }
+
+    .footer_col2 > h2{
+        font-size: 50px;
+        line-height: 66px;
+    }
+
+    .footer_col2 > div > a{
+        font-size: 20px;
+        line-height: 28px;
+        margin: 0 15px;
+    }
+
+    .footer_col2 > p{
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+@media all and (max-width: 950px){
+    /* Navigation bar */
+    .nav_links > a {
+        font-size: 20px;
+        margin: 12px;
+    }
+
+    /* footer */
+    .footer_container{
+        flex-direction: column;
+    }
+
+    .footer_col1{
+        width: 100%;
+    }
+
+    .footer_col1 > div{
+        margin-left: 0;
+    }
+
+    .footer_col2{
+        width: 100%;
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    .footer_col1 > div > a:first-child{
+        margin-left: 0;
+    }
+
+    .footer_col2 > div > a:first-child{
+        margin-left: 0;
+    }
+}
+
+@media all and (max-width: 768px) {
+    /* Navigation bar */
+    .menu-btn {
+        display: block;
+    }
+
+    .nav_links {
+        display: none;
+    }
+
+}
+
+@media all and (max-width: 610px){
+    /* footer */
+    footer{
+        padding-left: 30px;
+        padding-right: 10px;
+    }
+
+    .footer_col1 > h2{
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .footer_col2 > h2{
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .footer_col2 > div > a{
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0 10px;
+    }
+
+    .footer_col2 > p{
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+}
+
+@media all and (max-width: 470px){
+    /* Navigation bar */
+    .navigation{
+        height: 50px;
+    }
+
+    .logo{
+        width: 45px;
+        height: 40px;
+    }
+
+    /* footer */
+    footer{
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+
+    .footer_col1 > h2{
+        font-size: 28px;
+        line-height: 50px;
+    }
+
+    .footer_col1 > div > a{
+        margin: 10px;
+    }
+
+    .footer_col2 > h2{
+        font-size: 28px;
+        line-height: 50px;
+    }
+
+    .footer_col2 > div > a{
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 5px;
+    }
+
+    .footer_col2 > p{
+        font-size: 12px;
+        line-height: 18px;
+    }
 }
