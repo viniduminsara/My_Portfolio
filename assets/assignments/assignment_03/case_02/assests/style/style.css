@@ -1,0 +1,109 @@
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    background-color: white;
+    border: 1px solid red;
+    position: relative;
+    height: 50px;
+    padding: 10px;
+    box-shadow: 1px 2px 3px 3px lightgray;
+}
+
+header > img {
+    width: 150px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+header > nav {
+    position: absolute;
+    right: 40px;
+    top: 0;
+}
+
+header > nav > ul > li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+}
+
+main {
+    position: relative;
+}
+
+main > aside {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 270px;
+    background-color: purple;
+}
+
+main > aside > ul{
+    margin: 15px;
+}
+
+main > aside > ul > li {
+    color: white;
+    list-style: none;
+    padding-top: 20px;
+}
+
+main > section {
+    margin-left: 270px;
+    padding: 5px;
+}
+
+main > section > p {
+    color: black;
+}
+
+main > section > section:first-child {
+    border: 1px solid black;
+    height: 300px;
+    position: relative;
+}
+
+main > section > section:first-child > div {
+    border: 1px solid black;
+    height: 100%;
+    width: calc(100% / 3);
+    position: absolute;
+}
+
+main > section > section:first-child > div:nth-child(1){
+    background-size: cover;
+    background: url("../img/Apartment rent.gif") no-repeat center;
+
+}
+main > section > section:first-child > div:nth-child(2){
+    background-size: cover;
+    background: url("../img/Apartment rent.gif") no-repeat center;
+    left: calc(100%/3);
+}
+main > section > section:first-child > div:nth-child(3){
+    background-size: cover;
+    background: url("../img/Apartment rent.gif") no-repeat center;
+    right: 0;
+}
+footer {
+    height: 60px;
+    background-color: #595555;
+    position: relative;
+}
+
+footer > h4 {
+    color: white;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}

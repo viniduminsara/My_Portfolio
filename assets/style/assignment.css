@@ -143,7 +143,41 @@ body::-webkit-scrollbar {
     background-color: #b79dd1;
     transform: rotateX(-90deg);
     transform-origin: bottom;
-    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card_content ul{
+    padding: 5px;
+}
+
+.card_content ul li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 15px;
+    transition: all 0.3s ease;
+}
+
+.card_content ul li:before {
+    content: "📈";
+    font-size: 12px;
+    position: absolute;
+    top: 2px;
+    left: -10px;
+}
+
+.card_content ul li:hover{
+    transform: translateX(15px);
+    font-weight: 700;
+}
+
+.card_content ul li:active{
+    transform: scale(0.9);
+}
+
+.card_content ul li a{
+    text-decoration: none;
+    color: #8859B6;
+    font-size: 16px;
 }
 
 .card:hover .card_content {
@@ -176,12 +210,19 @@ body::-webkit-scrollbar {
     font-weight: 600;
     border: 2px solid #56317A;
     cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px 10px 0 0;
 }
 
 .card_button:hover{
     background: #56317A;
     color: #b79dd1;
     border: 2px solid #b79dd1;
+    transform: scale(1.2);
+}
+
+.card_button:active{
+    transform: scale(0.9);
 }
 
 footer{

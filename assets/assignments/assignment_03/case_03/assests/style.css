@@ -1,0 +1,71 @@
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+section > div{
+    position: absolute;
+    width: 201px;
+    height: 201px;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+section:first-child > div{
+    background-color: purple;
+}
+
+section:nth-child(2) > div{
+    background-color: cornflowerblue;
+}
+
+section:nth-child(3) > div{
+    background-color: salmon;
+}
+
+section > div > span{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#frame{
+    width: 220px;
+    height: 220px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: gray solid 10px;
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#frame > div{
+    width: calc(100% - 19px);
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    border: red solid 10px;
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

@@ -1,0 +1,140 @@
+section{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+section > div:first-child{
+    width: 50vw;
+    height: 50vh;
+    background-color: red;
+    position: absolute;
+}
+
+section > div:nth-child(2){
+    width: 50vw;
+    height: 50vh;
+    background-color: green;
+    position: absolute;
+    right: 0;
+}
+
+section > div:nth-child(3){
+    width: 50vw;
+    height: 50vh;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+}
+
+section > div:nth-child(4){
+    width: 50vw;
+    height: 50vh;
+    background-color: deeppink;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+section > div > div:first-child{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.corner {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+}
+
+section > div:first-child > .corner{
+    border-radius: 0 0 0 100%;
+    right: 0;
+}
+
+section > div:nth-child(2) > .corner{
+    border-radius: 0 0 100% 0;
+}
+
+section > div:nth-child(3) > .corner{
+    border-radius: 100% 0 0 0;
+    right: 0;
+    bottom: 0;
+}
+
+section > div:nth-child(4) > .corner{
+    border-radius: 0 100% 0 0;
+    bottom: 0;
+}
+
+section > div > div:first-child > div{
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    background-color: red;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.main_corner{
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    position: absolute;
+}
+
+section > div:nth-child(5){
+    border-radius: 0 0 100% 0;
+}
+
+section > div:nth-child(6){
+    border-radius: 0 0 0 100%;
+    right: 0;
+}
+
+section > div:nth-child(7){
+    border-radius: 0 100% 0 0;
+    bottom: 0;
+}
+
+section > div:nth-child(8){
+    border-radius: 100% 0 0 0;
+    right: 0;
+    bottom: 0;
+}
+
+.middle{
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.middle > .middle_circle{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: red;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
