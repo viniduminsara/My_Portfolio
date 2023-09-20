@@ -31,6 +31,10 @@ body::-webkit-scrollbar {
     z-index: 9999;
 }
 
+#loading-screen img{
+    width: 300px;
+}
+
 .navigation {
     border-radius: 30px;
     border: 5px solid #8859B6;
@@ -89,6 +93,9 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 
+#home{
+    padding: 5px;
+}
 
 .heading {
     width: 353px;
@@ -255,11 +262,14 @@ body::-webkit-scrollbar {
     /*gap: 40px;*/
 }
 
+#about_me{
+    padding-top: 150px;
+}
+
 .aboutMe_container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 300px;
 }
 
 .profile_img {
@@ -340,11 +350,14 @@ body::-webkit-scrollbar {
     color: #8859B6;
 }
 
+#service{
+    padding-top: 150px;
+}
+
 .service_header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 150px;
 }
 
 .service_header > div {
@@ -464,11 +477,14 @@ body::-webkit-scrollbar {
     left: 130px;
 }
 
+#projects{
+    padding-top: 150px;
+}
+
 .project_header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 300px;
 }
 
 .project_header > div {
@@ -575,10 +591,15 @@ body::-webkit-scrollbar {
     transform: rotateX(0deg);
 }
 
+/* assignment section*/
+
+#assignment{
+    padding-top: 150px;
+}
+
 .assignment_header{
     position: relative;
     left: 150px;
-    margin-top: 150px;
     font-size: 88px;
     font-weight: 700;
     line-height: 88px;
@@ -1256,13 +1277,16 @@ footer{
     }
 
     /* About me section */
+    #about_me{
+        padding-top: 0;
+    }
+
     .about_me_eg {
         display: none;
     }
 
     .aboutMe_container{
         flex-direction: column;
-        margin-top: 300px;
     }
 
     .about_me_header{
@@ -1286,10 +1310,6 @@ footer{
 
     .project_count{
         margin-left: 80px;
-    }
-
-    .aboutMe_container{
-        margin-top: 150px;
     }
 
     /* services section */
@@ -1375,10 +1395,6 @@ footer{
         font-size: 60px;
         line-height: 70px;
         right: 50px;
-    }
-
-    .project_header{
-        margin-top: 150px;
     }
 
     .project_link{
