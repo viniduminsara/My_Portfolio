@@ -19,17 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if(index > 3){
                     navLinks.forEach((link) => {
-                        link.classList.remove('active');
+                        link.classList.remove('active-link');
                     });
-                    navLinks[index-1].classList.add('active');
+                    navLinks[index-1].classList.add('active-link');
                 }else if(index < 3){
                     navLinks.forEach((link) => {
-                        link.classList.remove('active');
+                        link.classList.remove('active-link');
                     });
-                    navLinks[index].classList.add('active');
+                    navLinks[index].classList.add('active-link');
                 }else{
                     navLinks.forEach((link) => {
-                        link.classList.remove('active');
+                        link.classList.remove('active-link');
                     });
                 }
 
@@ -39,5 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.addEventListener('scroll', highlightNavLink);
+});
+
+const menuBtn = document.querySelector('.menu-btn');
+const navToggle = document.querySelector('.nav_links');
+const navContainer = document.querySelector('.navigation');
+
+menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
+    navToggle.classList.toggle('active');
+    navContainer.classList.toggle('active');
 });
 
