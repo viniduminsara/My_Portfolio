@@ -18,6 +18,23 @@ body::-webkit-scrollbar {
     width: 0;
 }
 
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #090310;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loading-screen img{
+    width: 300px;
+}
+
 .navigation {
     border-radius: 30px;
     border: 5px solid #8859B6;
@@ -69,7 +86,7 @@ body::-webkit-scrollbar {
 }
 
 .menu-btn {
-    display: none;
+    display: none !important;
     color: #8859B6;
     font-size: 24px;
     margin: 0 20px;
@@ -430,11 +447,42 @@ footer{
 @media all and (max-width: 768px) {
     /* Navigation bar */
     .menu-btn {
-        display: block;
+        display: block !important;
+    }
+
+    .menu-btn.active::before{
+        content: '\f00d';
+    }
+
+    .navigation.active {
+        border-radius: 30px 30px 0 0;
+        border-bottom: none;
+        transition: all 0.01s linear;
     }
 
     .nav_links {
-        display: none;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: -4.5px;
+        background-color: #090310;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 0 0 30px 30px;
+        border: 5px solid #8859B6;
+        border-top: none;
+        transform: scale(0);
+        transition: all 0.3s ease-in-out;
+        transform-origin: top right;
+        transition-delay: 0.01s;
+    }
+
+    .nav_links a{
+        display: block;
+        margin: 1.5rem 2rem;
+    }
+
+    .nav_links.active{
+        transform: scale(1);
     }
 
     /* heading section */

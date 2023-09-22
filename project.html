@@ -7,26 +7,23 @@
     <link rel="icon" type="image/x-icon" href="assets/img/icon.ico">
     <link rel="stylesheet" href="assets/style/project.css">
     <link rel="stylesheet" href="assets/style/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Vinidu Minsara | Projects</title>
 </head>
 
 <body>
-<div id="home"></div>
+<!-- pre-loader -->
+<div id="loading-screen">
+    <img src="assets/img/logo_animated.gif" alt="logo">
+</div>
 <header>
     <div class="navbar_container">
         <div class="navigation">
             <div class="nav_container">
                 <img src="assets/img/logo.png" alt="logo" class="logo">
-                <div class="menu-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 448 512">
-                        <style>svg {
-                            fill: #8859b6
-                        }</style>
-                        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
-                    </svg>
-                </div>
+                <i class="fa-solid fa-bars menu-btn"></i>
                 <nav class="nav_links">
-                    <a href="index.html#home">Home</a>
+                    <a href="index.html#home" class="active-link">Home</a>
                     <a href="index.html#about_me">About me</a>
                     <a href="index.html#service">Services</a>
                     <a href="index.html#projects">Projects</a>
@@ -167,5 +164,6 @@
         </div>
     </div>
 </footer>
+<script src="assets/script/project.js"></script>
 </body>
 </html>
