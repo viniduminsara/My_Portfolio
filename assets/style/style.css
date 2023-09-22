@@ -284,6 +284,7 @@ body::-webkit-scrollbar {
     font-weight: 700;
     line-height: 88px;
     left: 500px;
+    z-index: 100;
 }
 
 .about_me_details {
