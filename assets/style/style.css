@@ -3,6 +3,20 @@
     src: url(../font/Outfit-VariableFont.ttf);
 }
 
+:root{
+    --primary: #8859B6;
+    --light-bg: #f8f8f8;
+    --light-text: #8859B6;
+    --light-code: #f8f8f8;
+    --light-icon: #f8f8f8;
+    --light-p: #6B6870;
+    --dark-bg: #090310;
+    --dark-text: #f8f8f8;
+    --dark-code: #303030;
+    --dark-icon: #000000;
+    --dark-p: #f8f8f8;
+}
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -10,13 +24,22 @@ html, body {
 }
 
 body {
-    background-color: #090310;
+    background-color: var(--dark-bg);
     font-family: Outfit,sans-serif;
     color: white;
+    transition: background-color 0.8s ease-in-out;
 }
 
 body::-webkit-scrollbar {
     width: 0;
+}
+
+body.light{
+    --dark-bg: var(--light-bg);
+    --dark-text: var(--light-text);
+    --dark-code: var(--light-code);
+    --dark-icon: var(--light-icon);
+    --dark-p: var(--light-p);
 }
 
 #loading-screen {
@@ -25,7 +48,7 @@ body::-webkit-scrollbar {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #090310;
+    background-color: var(--dark-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,8 +61,8 @@ body::-webkit-scrollbar {
 
 .navigation {
     border-radius: 30px;
-    border: 5px solid #8859B6;
-    background: #090310;
+    border: 5px solid var(--primary);
+    background: var(--dark-bg);
     position: fixed;
     top: 20px;
     left: 50%;
@@ -48,6 +71,7 @@ body::-webkit-scrollbar {
     height: 75px;
     z-index: 999;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    transition: background 0.8s ease-in-out;
 }
 
 .nav_container {
@@ -66,10 +90,11 @@ body::-webkit-scrollbar {
     width: 70px;
     height: 60px;
     margin: 7px 10px 10px 20px;
+    fill: black;
 }
 
 .nav_links > a {
-    color: #8859B6;
+    color: var(--primary);
     font-size: 23px;
     font-weight: 400;
     line-height: 32px;
@@ -79,20 +104,86 @@ body::-webkit-scrollbar {
 }
 
 .nav_links > .active-link{
-    color: #FFFFFF;
+    color: var(--dark-text);
 }
 
 .nav_links > a:hover{
-    color: #FFFFFF;
+    color: var(--dark-text);
 }
 
 .menu-btn {
     display: none !important;
-    color: #8859B6;
+    color: var(--primary);
     font-size: 24px;
     margin: 0 20px;
     cursor: pointer;
 }
+
+.mode{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+input[type = 'checkbox']{
+    position: absolute;
+    opacity: 0;
+}
+
+.moon{
+    font-size: 1.5rem;
+    color: var(--primary);
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+    transition: 0.5s ease;
+}
+
+.sun{
+    position: absolute;
+    font-size: 1.5rem;
+    color: var(--primary);
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+    transform: scale(0);
+    transition: 0.5s ease;
+}
+
+.toggle{
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+input[type = 'checkbox']:checked~.moon{
+    transition-delay: 0s;
+    transform: rotate(360deg) scale(0);
+}
+
+input[type = 'checkbox']:checked~.sun{
+    transition-delay: 0s;
+    transform:  scale(1) rotate(360deg);
+}
+
+/*.aniamteBg{*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 100vh;*/
+/*    background: #f8f8f8;*/
+/*    z-index: -2;*/
+/*    clip-path: circle(0% at 50% 50%);*/
+/*    transition: 1.5s ease-out;*/
+/*}*/
+
+/*input:checked~.aniamteBg{*/
+/*    clip-path: circle(71% at 50% 50%);*/
+/*}*/
 
 #home{
     padding: 5px;
@@ -106,14 +197,14 @@ body::-webkit-scrollbar {
 }
 
 .heading > span {
-    color: #FFF;
+    color: var(--dark-text);
     font-size: 35px;
     font-weight: 400;
     line-height: 56px;
 }
 
 .heading > div {
-    color: #FFF;
+    color: var(--dark-text);
     font-size: 88px;
     font-weight: 700;
     line-height: 88px;
@@ -139,11 +230,13 @@ body::-webkit-scrollbar {
     width: 550px;
     height: 380px;
     margin: 0 auto;
-    background-color: #303030;
+    background-color: var(--dark-code);
     border-radius: 20px;
     z-index: 1;
+    border: var(--primary) solid 1px;
     box-shadow: 15px 15px 8px 0 rgba(0, 0, 0, 0.3);
     animation: card ease 2s infinite;
+    transition: background 0.8s ease-in-out;
 }
 
 @keyframes card {
@@ -227,14 +320,14 @@ body::-webkit-scrollbar {
     width: 45px;
     aspect-ratio: 1/1;
     border-radius: 100%;
-    border: 2px solid black;
+    border: 2px solid var(--dark-icon);
     transition: all 0.2s ease;
 }
 
 .social_links > a > svg{
     width: 45px;
     aspect-ratio: 1/1;
-    fill: black;
+    fill: var(--dark-icon);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -246,7 +339,7 @@ body::-webkit-scrollbar {
 .social_links > a:hover{
     border: none;
     transform: scale(1.25);
-    background-color: #1a1e22;;
+    background-color: #1a1e22;
 }
 
 .social_links > a:hover > svg{
@@ -279,7 +372,7 @@ body::-webkit-scrollbar {
 
 .about_me_header {
     position: absolute;
-    color: #FFF;
+    color: var(--dark-text);
     font-size: 88px;
     font-weight: 700;
     line-height: 88px;
@@ -290,7 +383,7 @@ body::-webkit-scrollbar {
 .about_me_details {
     width: 610px;
     height: 286px;
-    color: #FFF;
+    color: var(--dark-p);
     font-size: 23px;
     font-weight: 100;
     line-height: 32px;
@@ -349,7 +442,7 @@ body::-webkit-scrollbar {
 
 .number {
     font-size: 36px;
-    color: #8859B6;
+    color: var(--primary);
 }
 
 #service{
@@ -364,7 +457,7 @@ body::-webkit-scrollbar {
 
 .service_header > div {
     position: relative;
-    color: #FFF;
+    color: var(--dark-text);
     font-size: 88px;
     font-weight: 700;
     line-height: 88px;
@@ -422,6 +515,7 @@ body::-webkit-scrollbar {
 
 .skill_header {
     position: relative;
+    color: var(--dark-text);
     left: 150px;
     margin-top: 150px;
     font-size: 88px;
@@ -491,7 +585,7 @@ body::-webkit-scrollbar {
 
 .project_header > div {
     position: relative;
-    color: #FFF;
+    color: var(--dark-text);
     font-size: 88px;
     font-weight: 700;
     line-height: 88px;
@@ -601,6 +695,7 @@ body::-webkit-scrollbar {
 
 .assignment_header{
     position: relative;
+    color: var(--dark-text);
     left: 150px;
     font-size: 88px;
     font-weight: 700;
@@ -670,16 +765,16 @@ body::-webkit-scrollbar {
     color: #FF718A;
     font-size: 28px;
     font-weight: 400;
-    line-height: 40px; /* 142.857% */
+    line-height: 40px;
     text-decoration: none;
     text-align: center;
 }
 
 .contactme_header{
-    color: #FFF;
+    color: var(--dark-text);
     font-size: 88px;
     font-weight: 700;
-    line-height: 88px; /* 100% */
+    line-height: 88px;
     text-align: center;
     margin-top: 150px;
 }
@@ -733,7 +828,7 @@ body::-webkit-scrollbar {
 }
 
 .form_input > label{
-    color: #FFF;
+    color: var(--dark-p);
     font-size: 23px;
     font-weight: 700;
     line-height: 32px;
@@ -1159,7 +1254,6 @@ footer{
     }
 
     .heading > div {
-        color: #FFF;
         font-size: 60px;
         font-weight: 700;
         line-height: 80px;
@@ -1269,10 +1363,10 @@ footer{
         width: 100%;
         top: 100%;
         left: -4.5px;
-        background-color: #090310;
+        background-color: var(--dark-bg);
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
         border-radius: 0 0 30px 30px;
-        border: 5px solid #8859B6;
+        border: 5px solid var(--primary);
         border-top: none;
         transform: scale(0);
         transition: all 0.3s ease-in-out;
@@ -1287,6 +1381,11 @@ footer{
 
     .nav_links.active{
         transform: scale(1);
+    }
+
+    .mode{
+        margin-left:1rem;
+        margin-bottom: 0.5rem;
     }
 
     /* Home section */

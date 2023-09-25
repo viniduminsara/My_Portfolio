@@ -50,6 +50,13 @@ menuBtn.addEventListener('click', () => {
     navContainer.classList.toggle('active');
 });
 
+//mode change
+const checkbox = document.getElementById('mode-check');
+
+checkbox.addEventListener('click',() => {
+    document.body.classList.toggle('light');
+});
+
 //Add scrolling animation
 ScrollReveal({
     reset: true,
