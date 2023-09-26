@@ -62,7 +62,7 @@ ScrollReveal({
     reset: true,
     distance: '80px',
     duration: 1800,
-})
+});
 
 //home section
 ScrollReveal().reveal('.heading, .details', {delay: 300, origin: 'left'});
