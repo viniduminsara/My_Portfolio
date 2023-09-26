@@ -101,8 +101,20 @@ ScrollReveal().reveal('.contact_form form .form_input',{delay: 300, origin: 'rig
 ScrollReveal().reveal('form button',{delay: 300, origin: 'right'});
 ScrollReveal().reveal('#contact_me img',{delay: 300, origin: 'bottom'});
 
+//cursor
+const cursor = document.querySelector('.cursor_outline');
 
+window.addEventListener('mousemove', (e) =>{
 
+    let posX = e.clientX;
+    let posY = e.clientY;
+
+    cursor.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+    }, {duration: 400, fill: 'forwards'});
+
+});
 
 
 

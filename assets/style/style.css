@@ -59,6 +59,21 @@ body.light{
     width: 300px;
 }
 
+.cursor_outline{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--dark-p);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1000;
+    pointer-events: none;
+}
+
 .navigation {
     border-radius: 30px;
     border: 5px solid var(--primary);
