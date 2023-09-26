@@ -14,3 +14,16 @@ menuBtn.addEventListener('click', () => {
     navToggle.classList.toggle('active');
     navContainer.classList.toggle('active');
 });
+
+//Add scrolling animation
+ScrollReveal({
+    reset: true,
+    distance: '80px',
+    duration: 1800,
+});
+
+//heading section
+ScrollReveal().reveal('.header',{delay:300, origin:'bottom'});
+
+//assignment section
+ScrollReveal().reveal('.card', {delay: 400, origin: 'right', interval: 100});
