@@ -80,9 +80,10 @@ body.light{
     background: var(--dark-bg);
     position: fixed;
     top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 1350px;
     height: 75px;
     z-index: 999;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
@@ -1011,6 +1012,11 @@ footer{
 
  /* Media queries */
 @media all and (max-width: 1360px) {
+    /*navigation*/
+    .navigation{
+        width: 1100px;
+    }
+
     /* About me section */
     .about_me_details > p{
         width: 450px;
@@ -1048,6 +1054,11 @@ footer{
 
 
 @media all and (max-width: 1150px){
+    /*navigation*/
+    .navigation{
+        width: 900px;
+    }
+
     /* Home section */
     .code_area{
         top: 300px;
@@ -1234,7 +1245,16 @@ footer{
 }
 
 @media all and (max-width: 950px){
+    /* cursor */
+    .cursor_outline{
+        display: none;
+    }
+
     /* Navigation bar */
+    .navigation{
+        width: 740px;
+    }
+
     .nav_links > a {
         font-size: 20px;
         margin: 12px;
@@ -1357,6 +1377,10 @@ footer{
 @media all and (max-width: 768px) {
 
     /* Navigation bar */
+    .navigation{
+        width: 600px;
+    }
+
     .menu-btn {
         display: block !important;
     }
@@ -1583,6 +1607,11 @@ footer{
 }
 
 @media all and (max-width: 610px){
+    /* navigation */
+    .navigation{
+        width: 450px;
+    }
+
     /* skill section */
     .main_skills > img{
         width: 100px;
@@ -1671,6 +1700,7 @@ footer{
     /* Navigation bar */
     .navigation{
         height: 55px;
+        width: 380px;
     }
 
     .logo{
@@ -1882,7 +1912,33 @@ footer{
     }
 }
 
+@media all and (max-width: 400px){
+    /* Navigation bar */
+    .navigation{
+        width: 340px;
+    }
+}
+
+@media all and (max-width: 360px){
+    /* Navigation bar */
+    .navigation{
+        width: 320px;
+    }
+}
+
+@media all and (max-width: 340px){
+    /* Navigation bar */
+    .navigation{
+        width: 300px;
+    }
+}
+
 @media all and (max-width: 320px){
+    /* Navigation bar */
+    .navigation{
+        width: 280px;
+    }
+
     /* Home section */
     .code_area{
         right: 50px;
