@@ -329,7 +329,7 @@
         <div class="contactme_header">Contact Me</div>
         <img src="assets/img/eclipse_group.png" alt="eclipse group">
         <div class="contact_form">
-            <form action="#">
+            <form>
                 <div class="form_input">
                     <label for="name">Full name *</label><br>
                     <input type="text" id="name" name="name" placeholder="Enter your name" class="input" required>
@@ -350,7 +350,7 @@
                     <span class="input-border"></span>
                     <br>
                 </div>
-                <button type="submit">
+                <button type="button" onclick="sendMail()">
                     <span>Send</span>
                     <div class="svg-wrapper-1">
                         <div class="svg-wrapper">
@@ -414,6 +414,9 @@
     </div>
 </footer>
 <script src="assets/script/scrollreveal.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
 <script src="assets/script/script.js"></script>
 </body>
 </html>

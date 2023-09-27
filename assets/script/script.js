@@ -141,6 +141,35 @@ window.addEventListener('scroll', () => {
     }
 });
 
+(function(){
+    emailjs.init("qB_ZadsDSmFghoi2w");
+})();
+
+const name = document.querySelector('#name');
+const email = document.querySelector('#email');
+const msg = document.querySelector('#message');
+
+function sendMail(){
+
+    let parameter = {
+        name: name.value,
+        email: email.value,
+        message: msg.value
+    };
+
+    const serviceId = 'service_sy3lx54';
+    const templateId = 'template_hx99irk';
+
+    emailjs.send(serviceId, templateId, parameter).then((res) => {
+        name.value = '';
+        email.value = '';
+        msg.value = '';
+        alert('Message send successfully.');
+    }).catch((e) => {
+        alert(e);
+    })
+}
+
 
 
 
