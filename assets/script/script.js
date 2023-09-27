@@ -116,5 +116,34 @@ window.addEventListener('mousemove', (e) =>{
 
 });
 
+//counting animation
+const display = document.querySelector('.number');
+const section = document.querySelector('#about_me');
+
+let startValue;
+let endValue = parseInt(display.getAttribute('data-val'));
+let active = false;
+
+window.addEventListener('scroll', () => {
+    if (pageYOffset > section.offsetTop - section.offsetHeight - 200 && active === false){
+        startValue = 0;
+        let counter = setInterval(() => {
+            startValue++;
+            display.textContent = `${startValue}+ `;
+            if (startValue === endValue){
+                clearInterval(counter);
+            }
+        }, Math.floor(2000 / endValue));
+        active = true;
+    }else if(pageYOffset < section.offsetTop - section.offsetHeight - 500 || pageYOffset === 0 && active === true){
+        display.textContent = '0+ ';
+        active = false;
+    }
+});
+
+
+
+
+
 
 
