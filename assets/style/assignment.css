@@ -8,10 +8,12 @@
     --light-bg: #f8f8f8;
     --light-text: #8859B6;
     --light-card: #ebd7f1;
+    --light-p: #6B6870;
     --light-bg-image: url(../img/background_2.jpeg);
     --dark-bg: #090310;
     --dark-text: #f8f8f8;
     --dark-card: #311C46;
+    --dark-p: #f8f8f8;
     --dark-bg-image: url(../img/background.svg);
 }
 
@@ -19,6 +21,7 @@ body.light{
     --dark-bg: var(--light-bg);
     --dark-text: var(--light-text);
     --dark-card: var(--light-card);
+    --dark-p: var(--light-p);
     --dark-bg-image: var(--light-bg-image);
 }
 
@@ -48,6 +51,21 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     z-index: 9999;
+}
+
+.cursor_outline{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--dark-p);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1000;
+    pointer-events: none;
 }
 
 #loading-screen img{

@@ -22,6 +22,21 @@ checkbox.addEventListener('click',() => {
     document.body.classList.toggle('light');
 });
 
+//cursor
+const cursor = document.querySelector('.cursor_outline');
+
+window.addEventListener('mousemove', (e) =>{
+
+    let posX = e.clientX;
+    let posY = e.clientY;
+
+    cursor.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+    }, {duration: 400, fill: 'forwards'});
+
+});
+
 //Add scrolling animation
 ScrollReveal({
     reset: true,
