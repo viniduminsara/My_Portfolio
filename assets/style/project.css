@@ -7,13 +7,11 @@
     --primary: #8859B6;
     --light-bg: #f8f8f8;
     --light-text: #8859B6;
-    --light-code: #f8f8f8;
     --light-icon: #f8f8f8;
     --light-p: #6B6870;
     --light-bg-image: url(../img/background_2.jpeg);
     --dark-bg: #090310;
     --dark-text: #f8f8f8;
-    --dark-code: #303030;
     --dark-icon: #000000;
     --dark-p: #f8f8f8;
     --dark-bg-image: url(../img/background.svg);
@@ -187,13 +185,14 @@ input[type = 'checkbox']:checked~.sun{
 .heading_container{
     background-image: var(--dark-bg-image);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     width: 100%;
     height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-image 0.8s ease-in-out;
+    transition: background 0.8s ease-in-out;
 }
 
 .header > h1{
