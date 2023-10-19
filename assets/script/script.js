@@ -187,7 +187,8 @@ function sendMail(){
         name.value = '';
         email.value = '';
         msg.value = '';
-        alert('Message send successfully.');
+
+        Swal.fire('Message send!', 'Thank you for sharing your ideas with me.', 'success');
     }).catch((e) => {
         alert(e);
     })
