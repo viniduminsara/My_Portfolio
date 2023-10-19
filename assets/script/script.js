@@ -15,20 +15,28 @@ document.addEventListener('DOMContentLoaded', () => {
         sections.forEach((section, index) => {
             if (section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
 
-                if(index > 3){
-                    navLinks.forEach((link) => {
-                        link.classList.remove('active-link');
-                    });
-                    navLinks[index-1].classList.add('active-link');
-                }else if(index < 3){
-                    navLinks.forEach((link) => {
-                        link.classList.remove('active-link');
-                    });
-                    navLinks[index].classList.add('active-link');
-                }else{
-                    navLinks.forEach((link) => {
-                        link.classList.remove('active-link');
-                    });
+                switch (index){
+                    case 0:
+                       changeHighlight(navLinks,0);
+                       break;
+                    case 1:
+                        changeHighlight(navLinks,1);
+                        break;
+                    case 2:
+                        changeHighlight(navLinks,2);
+                        break;
+                    case 3:
+                        changeHighlight(navLinks,-1);
+                        break;
+                    case 4:
+                        changeHighlight(navLinks,3);
+                        break;
+                    case 5:
+                        changeHighlight(navLinks,4);
+                        break;
+                    case 6:
+                        changeHighlight(navLinks,-1);
+                        break;
                 }
 
             }
@@ -38,6 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', highlightNavLink);
 });
+
+function changeHighlight(navLinks, index){
+    if (index !== -1){
+        navLinks.forEach((link) => {
+            link.classList.remove('active-link');
+        });
+        navLinks[index].classList.add('active-link');
+    }else{
+        navLinks.forEach((link) => {
+            link.classList.remove('active-link');
+        });
+    }
+
+}
 
 //menu button
 const menuBtn = document.querySelector('.menu-btn');
@@ -81,6 +103,7 @@ ScrollReveal().reveal('.services_container .service_item',{delay: 400, origin: '
 
 //skill section
 ScrollReveal().reveal('.skill_header', {delay : 300, origin: 'bottom'});
+ScrollReveal().reveal('.skill_container p', {delay : 300, origin: 'bottom', interval:100});
 ScrollReveal().reveal('.main_skills img',{delay: 400, origin: 'right', interval:200});
 
 //project section
@@ -169,6 +192,20 @@ function sendMail(){
         alert(e);
     })
 }
+
+particlesJS("particles-js",
+    {"particles":{"number":{"value":12,"density":{"enable":true,"value_area":800}},
+            "color":{"value":"#291b34"},"shape":{"type":"polygon","stroke":{"width":0,"color":"#000"},
+            "polygon":{"nb_sides":6},"image":{"src":"img/github.svg","width":100,"height":100}},
+            "opacity":{"value":0.1,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},
+            "size":{"value":100,"random":false,"anim":{"enable":true,"speed":10,"size_min":40,"sync":false}},
+            "line_linked":{"enable":false,"distance":200,"color":"#ffffff","opacity":1,"width":2},
+            "move":{"enable":true,"speed":8,"direction":"none","random":false,"straight":false,"out_mode":"out",
+            "bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"bubble"},
+            "onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},
+            "repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true
+    }
+);
 
 
 
