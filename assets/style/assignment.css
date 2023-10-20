@@ -72,23 +72,6 @@ body::-webkit-scrollbar {
     width: 300px;
 }
 
-main {
-    position: relative;
-}
-
-#particles-js{
-    position: absolute;
-    top: 120vh;
-    left: 0;
-    width: 100%;
-    height: calc(107% - 120vh);
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-    transition: background-color 0.8s ease-in-out;
-}
-
 .navigation {
     border-radius: 30px;
     border: 5px solid var(--primary);
@@ -552,11 +535,6 @@ footer{
 }
 
 @media all and (max-width: 768px) {
-    #particles-js{
-        top: 100vh;
-        height: calc(104% - 100vh);
-    }
-
     /* Navigation bar */
     .menu-btn {
         display: block !important;
@@ -653,10 +631,6 @@ footer{
 }
 
 @media all and (max-width: 470px){
-    #particles-js{
-        top: 80vh;
-        height: calc(103% - 80vh);
-    }
 
     /* Navigation bar */
     .navigation{

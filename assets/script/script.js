@@ -156,7 +156,7 @@ window.addEventListener('scroll', () => {
             if (startValue === endValue){
                 clearInterval(counter);
             }
-        }, Math.floor(2000 / endValue));
+        }, Math.floor(2500 / endValue));
         active = true;
     }else if(pageYOffset < section.offsetTop - section.offsetHeight - 500 || pageYOffset === 0 && active === true){
         display.textContent = '0+ ';
@@ -172,41 +172,48 @@ const name = document.querySelector('#name');
 const email = document.querySelector('#email');
 const msg = document.querySelector('#message');
 
+let email_pattern = '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$';
+
 function sendMail(){
 
-    let parameter = {
-        name: name.value,
-        email: email.value,
-        message: msg.value
-    };
+    if (name.value && email.value && msg.value) {
+        if (email.value.match(email_pattern)) {
 
-    const serviceId = 'service_sy3lx54';
-    const templateId = 'template_hx99irk';
+            let parameter = {
+                name: name.value,
+                email: email.value,
+                message: msg.value
+            };
 
-    emailjs.send(serviceId, templateId, parameter).then((res) => {
-        name.value = '';
-        email.value = '';
-        msg.value = '';
+            const serviceId = 'service_sy3lx54';
+            const templateId = 'template_hx99irk';
 
-        Swal.fire('Message send!', 'Thank you for sharing your ideas with me.', 'success');
-    }).catch((e) => {
-        alert(e);
-    })
+            emailjs.send(serviceId, templateId, parameter).then(() => {
+                name.value = '';
+                email.value = '';
+                msg.value = '';
+
+                Swal.fire('Message send!', 'Thank you for sharing your ideas with me.', 'success');
+            }).catch((e) => {
+                Swal.fire({
+                    icon: 'error',
+                    title: e
+                });
+            });
+        }else{
+            Swal.fire({
+                icon: 'warning',
+                title: 'Please enter valid email!'
+            });
+        }
+    }else{
+        Swal.fire({
+            icon: 'warning',
+            title: 'Please fill all the details!'
+        });
+    }
 }
 
-particlesJS("particles-js",
-    {"particles":{"number":{"value":12,"density":{"enable":true,"value_area":800}},
-            "color":{"value":"#291b34"},"shape":{"type":"polygon","stroke":{"width":0,"color":"#000"},
-            "polygon":{"nb_sides":6},"image":{"src":"img/github.svg","width":100,"height":100}},
-            "opacity":{"value":0.1,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},
-            "size":{"value":100,"random":false,"anim":{"enable":true,"speed":10,"size_min":40,"sync":false}},
-            "line_linked":{"enable":false,"distance":200,"color":"#ffffff","opacity":1,"width":2},
-            "move":{"enable":true,"speed":8,"direction":"none","random":false,"straight":false,"out_mode":"out",
-            "bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"bubble"},
-            "onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},
-            "repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true
-    }
-);
 
 
 
