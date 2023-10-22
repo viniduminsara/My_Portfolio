@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="Vinidu Minsara, Portfolio,Full Stack Developer">
+    <meta name="google-site-verification" content="OXRGiz1bDru0BcQqopyZQGmQmp6rctciqFXJrBBgujQ" />
+    <meta name="keywords" content="Vinidu Minsara,vinidu minsara, Portfolio,Full Stack Developer">
     <meta name="description"
           content="This portfolio website showcases the work and expertise of Vinidu Minsara,
      a Full Stack Developer from Sri Lanka. The website provides information about the developer, including skills,
@@ -15,6 +16,7 @@
     <meta property="og:image" content="https://viniduminsara.github.io/temp_portfolio/assets/img/logo_img.png">
     <link rel="icon" type="image/x-icon" href="assets/img/icon.ico">
     <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/chatbot.css">
     <link rel="stylesheet" href="assets/style/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Vinidu Minsara | Home</title>
@@ -27,6 +29,28 @@
 
 <!-- cursor -->
 <div class="cursor_outline"></div>
+
+<!-- chatBot -->
+<button class="chatbot-toggler">
+    <i class="fa-solid fa-message fa-xl"></i>
+    <i class="fa-solid fa-xmark fa-2xl"></i>
+</button>
+<div class="chatbot">
+    <header>
+        <h2>Chat with Vinidu</h2>
+        <span class="close-btn material-symbols-outlined">close</span>
+    </header>
+    <ul class="chatbox">
+        <li class="chat incoming">
+            <div class="message-icon"></div>
+            <p>How can I help you today?</p>
+        </li>
+    </ul>
+    <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <i class="fa-solid fa-paper-plane"></i>
+    </div>
+</div>
 
 <header>
     <div class="navbar_container">
@@ -419,5 +443,6 @@
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
 <script src="assets/script/script.js"></script>
+<script src="assets/script/chatbot.js"></script>
 </body>
 </html>

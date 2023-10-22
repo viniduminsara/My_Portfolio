@@ -70,7 +70,7 @@ body.light{
     left: 0;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    z-index: 1000;
+    z-index: 2000;
     pointer-events: none;
 }
 
