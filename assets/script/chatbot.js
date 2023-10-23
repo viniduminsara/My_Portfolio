@@ -5,6 +5,7 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input i");
 
 let userMessage = null;
+let first_selection = null;
 const inputInitHeight = chatInput.scrollHeight;
 
 const createMessage = (message, className) => {
@@ -25,28 +26,34 @@ const generateResponse = (chatElement) => {
         }else if(userMessage.toLowerCase().includes('contact')){
             messageElement.innerHTML = 'You can contact me from'+
                 '<a href="https://mail.google.com/mail/?view=cm&source=mailto&to=viniduminsara@gmail.com">'+
-                '<div class="select_option"><i class="fa-solid fa-envelope"></i>Email</div>'+
+                    '<div class="select_option"><i class="fa-solid fa-envelope"></i>Email</div>'+
                 '</a>'+
                 '<a href="https://wa.me/94769007620">'+
-                '<div class="select_option"><i class="fa-brands fa-whatsapp"></i>Whatsapp</div>'+
+                    '<div class="select_option"><i class="fa-brands fa-whatsapp"></i>Whatsapp</div>'+
                 '</a>'+
                 '<a href="https://www.linkedin.com/in/vinidu-minsara-9157b7278/">'+
-                '<div class="select_option"><i class="fa-brands fa-linkedin"></i>Linkedin</div>'+
+                    '<div class="select_option"><i class="fa-brands fa-linkedin"></i>Linkedin</div>'+
                 '</a>';
         }else if(userMessage.toLowerCase().includes('work') || userMessage.toLowerCase().includes('project')){
             messageElement.innerHTML = 'You can see my projects here'+
-                '<a href="">'+
-                '<div class="select_option">Project Page<i class="fa-solid fa-up-right-from-square"></i></div>'+
+                '<a href="project.html">'+
+                    '<div class="select_option">Project Page<i class="fa-solid fa-up-right-from-square"></i></div>'+
                 '</a>';
         }else{
             messageElement.innerHTML = 'Hi, How can I help you ?'+
                 '<div class="select_option first-select">About Vinidu Minsara</div>'+
                 '<div class="select_option first-select">Works of Vinidu</div>'+
                 '<div class="select_option first-select">Contact Vinidu</div>';
-            const first_selection = document.querySelectorAll(".first-select");
-            first_selection[0].addEventListener('click',() => firstSelectionAction(first_selection[0]));
-            first_selection[1].addEventListener('click',() => firstSelectionAction(first_selection[1]));
-            first_selection[2].addEventListener('click',() => firstSelectionAction(first_selection[2]));
+            if (first_selection !== null) {
+                first_selection.forEach((value) => {
+                    const clonedElement = value.cloneNode(true);
+                    value.parentNode.replaceChild(clonedElement, value);
+                });
+            }
+            first_selection = document.querySelectorAll(".first-select");
+            first_selection.forEach((value) => {
+                value.addEventListener('click',() => firstSelectionAction(value));
+            });
         }
     }, 1500);
 
