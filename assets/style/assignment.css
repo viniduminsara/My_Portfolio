@@ -181,6 +181,23 @@ input[type = 'checkbox']:checked~.sun{
     transform:  scale(1) rotate(360deg);
 }
 
+main{
+    position: relative;
+}
+
+#particles-js{
+    position:absolute;
+    top: 120vh;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(107% - 120vh);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
 .heading_container{
     background-image: var(--dark-bg-image);
     background-position: center;
@@ -578,6 +595,10 @@ footer{
     .mode{
         margin-left:1rem;
         margin-bottom: 0.5rem;
+    }
+
+    #particles-js{
+        display: none;
     }
 
     /* heading section */
