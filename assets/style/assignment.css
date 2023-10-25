@@ -517,6 +517,11 @@ footer{
 }
 
 @media all and (max-width: 950px){
+    /* cursor */
+    .cursor_outline{
+        display: none;
+    }
+
     /* Navigation bar */
     .nav_links > a {
         font-size: 20px;
