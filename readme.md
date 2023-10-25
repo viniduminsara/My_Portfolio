@@ -10,7 +10,7 @@ https://www.gloomaps.com/dliexvVhJT
 
 ### WireFrame Diagram 
 
-`https://drive.google.com/file/d/1zY1S-rZBWcKV_6SBXWy1XfrwZhcm6uHo/view?usp=sharing
+https://drive.google.com/file/d/1zY1S-rZBWcKV_6SBXWy1XfrwZhcm6uHo/view?usp=sharing
 
 ### Mockup Diagram
 
