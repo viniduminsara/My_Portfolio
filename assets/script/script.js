@@ -79,6 +79,14 @@ checkbox.addEventListener('click',() => {
     document.body.classList.toggle('light');
 });
 
+//typing animation
+let typed = new Typed(".typing", {
+    strings: ["Full Stack Developer", "UI/UX Designer", "Web Developer"],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true,
+});
+
 //Add scrolling animation
 ScrollReveal({
     reset: true,
