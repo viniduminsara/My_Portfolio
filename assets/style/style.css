@@ -1944,19 +1944,22 @@ footer{
         bottom: 20px;
     }
     .chatbot {
-        right: 0;
-        bottom: 0;
-        height: 100%;
-        border-radius: 0;
-        width: 100%;
+        right: 20px;
+        bottom: 100px;
+        height: 70%;
+        width: 85%;
     }
     .chatbot .chatbox {
-        height: 90%;
         padding: 25px 15px 100px;
     }
     .chatbot .chat-input {
         padding: 5px 15px;
     }
+
+    .chat-input textarea {
+        width: 80%;
+    }
+
     .chatbot header span {
         display: block;
     }
@@ -2189,6 +2192,10 @@ footer{
     /* Navigation bar */
     .navigation{
         width: 320px;
+    }
+
+    .chat-input textarea {
+        width: 70%;
     }
 }
 
