@@ -388,7 +388,7 @@ header h2 {
     aspect-ratio: 1/1;
     cursor: default;
     align-self: flex-end;
-    background: url('/assets/img/chatbot_icon.png') center;
+    background: url('/assets/img/corner_icon.svg') center;
     background-size: cover;
     border-radius: 50%;
     margin: 0 10px 7px 0;
