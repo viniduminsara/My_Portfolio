@@ -72,6 +72,41 @@ menuBtn.addEventListener('click', () => {
     navContainer.classList.toggle('active');
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Hide all skill categories except the first one
+    const skillCategories = document.querySelectorAll('.skill-category');
+    for (let i = 1; i < skillCategories.length; i++) {
+        skillCategories[i].style.display = 'none';
+    }
+
+    document.getElementById('language-button').addEventListener('click', function() {
+        hideAllSkillCategories(skillCategories[0]);
+    });
+
+    // Create a click event handler for the "Frontend" button
+    document.getElementById('frontend-button').addEventListener('click', function() {
+        hideAllSkillCategories(skillCategories[1]);
+    });
+
+    // Create a click event handler for the "Backend" button
+    document.getElementById('backend-button').addEventListener('click', function() {
+        hideAllSkillCategories(skillCategories[2]);
+    });
+
+    // Create a click event handler for the "Tools" button
+    document.getElementById('tools-button').addEventListener('click', function() {
+        hideAllSkillCategories(skillCategories[3]);
+    });
+
+    function hideAllSkillCategories(category) {
+        for (let i = 0; i < skillCategories.length; i++) {
+            skillCategories[i].style.display = 'none';
+        }
+        category.style.display = 'block';
+    }
+});
+
+
 //mode change
 const checkbox = document.getElementById('mode-check');
 
@@ -111,8 +146,7 @@ ScrollReveal().reveal('.services_container .service_item',{delay: 400, origin: '
 
 //skill section
 ScrollReveal().reveal('.skill_header', {delay : 300, origin: 'bottom'});
-ScrollReveal().reveal('.skill_container p', {delay : 300, origin: 'bottom', interval:100});
-ScrollReveal().reveal('.main_skills img',{delay: 400, origin: 'right', interval:200});
+ScrollReveal().reveal('.skills-category-buttons', {delay : 300, origin: 'right', interval:100});
 
 //project section
 ScrollReveal().reveal('.project_header div', {delay : 300, origin: 'bottom'});

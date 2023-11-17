@@ -785,6 +785,93 @@ span.typed-cursor {
     margin: 175px;
 }
 
+.skills-category-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.skill-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skill-category {
+    transition: opacity 1s ease, visibility 1s ease;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.skill-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px;
+    transition: all 1s ease;
+}
+
+.skill-images img {
+    margin: 100px 75px;
+}
+
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.button {
+    --border-right: 6px;
+    --text-stroke-color: #4A2A68;
+    --animation-color: #8859B6;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 2em;
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0;
+    inset: 0;
+    /* border-right: var(--border-right) solid var(--animation-color); */
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color));
+    border-right: none;
+}
+
+.button:focus .hover-text{
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color));
+    border-right: none;
+}
+
 .skill_container {
     display: flex;
     flex-wrap: wrap;
@@ -1086,7 +1173,7 @@ span.typed-cursor {
     line-height: 32px;
 }
 
-button {
+.contact_btn {
     font-size: 18px;
     background: #FF4D6D;
     color: white;
@@ -1101,31 +1188,31 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.contact_btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-button:active {
+.contact_btn:active {
     transform: scale(0.95);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-button span {
+.contact_btn span {
     display: block;
     margin-left: 0.4em;
     transition: all 0.3s;
     margin-right: 10px;
 }
 
-button svg {
+.contact_btn svg {
     width: 18px;
     height: 18px;
     fill: white;
     transition: all 0.3s;
 }
 
-button .svg-wrapper {
+.contact_btn .svg-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1137,11 +1224,11 @@ button .svg-wrapper {
     transition: all 0.3s;
 }
 
-button:hover .svg-wrapper {
+.contact_btn:hover .svg-wrapper {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-button:hover svg {
+.contact_btn:hover svg {
     transform: rotate(45deg);
 }
 
@@ -1410,6 +1497,11 @@ footer{
         font-size: 16px;
     }
 
+    /* skill section */
+    .skill-images img {
+        margin: 50px 40px;
+    }
+
     /* project section */
     .project_card{
         height: 200px;
@@ -1543,29 +1635,6 @@ footer{
 
     .background_img {
         height: 700px;
-    }
-
-    /* Skill section */
-    .main_skills > img{
-        width: 150px;
-        aspect-ratio: 1/1;
-        margin: 20px;
-    }
-
-    .main_skills > img:nth-child(2){
-        width: 100px;
-        aspect-ratio: 1/1;
-    }
-
-    .skill_container > p {
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 32px;
-    }
-
-    .skill_opencv{
-        top: 50px;
-        left: 350px;
     }
 
     /* assignment section */
@@ -1750,11 +1819,7 @@ footer{
         display: none;
     }
 
-    /* service section */
-
-    .main_skills > img{
-        margin: 10px;
-    }
+    /* skill section */
 
     .skill_header{
         font-size: 72px;
@@ -1762,29 +1827,9 @@ footer{
         left: 100px;
     }
 
-    .skill_git{
-        top: 30px;
-        left: 100px;
-    }
-
-    .skill_hibernate{
-        top: 450px;
-        right: 200px;
-    }
-
-    .skill_figma{
-        top: 0;
-        right: 125px;
-    }
-
-    .skill_opencv{
-        top: 50px;
-        left: 250px;
-    }
-
-    .skill_mysql{
-        top: 400px;
-        left: 100px;
+    .button {
+        letter-spacing: 2px;
+        font-size: 1.4em;
     }
 
     /* project section */
@@ -1852,45 +1897,6 @@ footer{
     /* navigation */
     .navigation{
         width: 450px;
-    }
-
-    /* skill section */
-    .main_skills > img{
-        width: 100px;
-    }
-
-    .main_skills > img:nth-child(2){
-        width: 75px;
-    }
-
-    .skill_container > p {
-        font-size: 20px;
-        line-height: 28px;
-    }
-
-    .skill_git{
-        top: 30px;
-        left: 50px;
-    }
-
-    .skill_hibernate{
-        top: 450px;
-        right: 150px;
-    }
-
-    .skill_figma{
-        top: 0;
-        right: 100px;
-    }
-
-    .skill_opencv{
-        top: 50px;
-        left: 175px;
-    }
-
-    .skill_mysql{
-        top: 400px;
-        left: 50px;
     }
 
     /* contact me section */
@@ -2076,28 +2082,15 @@ footer{
     }
 
     /* skill section */
-    .main_skills{
-        flex-direction: column;
-        margin: 50px 50px 0 50px;
-    }
-
-    .main_skills > img{
-        width: 200px;
-        margin: 30px;
-    }
-
-    .main_skills > img:nth-child(2){
-        width: 150px;
-    }
-
     .skill_header{
         font-size: 60px;
         line-height: 72px;
         left: 30px;
     }
 
-    .skill_container{
-        display: none;
+    .button {
+        letter-spacing: 2px;
+        font-size: 1em;
     }
 
     /* project section */

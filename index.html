@@ -254,19 +254,78 @@
     <!-- skills section -->
     <section id="skill">
         <div class="skill_header">My Skills</div>
-        <div class="skill_container">
-            <p class="skill_git">Git</p>
-            <p class="skill_hibernate">Hibernate</p>
-            <p class="skill_figma">Figma</p>
-            <p class="skill_opencv">OpenCV</p>
-            <p class="skill_mysql">MySQL</p>
+        <div class="skills-category-buttons">
+            <button id="language-button" class="button">
+                <span class="actual-text">&nbsp;Languages&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;Languages&nbsp;</span>
+            </button>
+            <button id="frontend-button" class="button">
+                <span class="actual-text">&nbsp;Frontend&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;Frontend&nbsp;</span>
+            </button>
+            <button id="backend-button" class="button">
+                <span class="actual-text">&nbsp;Backend&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;Backend&nbsp;</span>
+            </button>
+            <button id="tools-button" class="button">
+                <span class="actual-text">&nbsp;Tools&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;Tools&nbsp;</span>
+            </button>
         </div>
-        <div class="main_skills">
-            <img src="assets/img/java-icon.svg" alt="java">
-            <img src="assets/img/javascript-icon.svg" alt="javascript">
-            <img src="assets/img/html5-icon.svg" alt="html5">
-            <img src="assets/img/css3-icon.svg" alt="css">
+
+        <div class="skill-container">
+            <div class="skill-category" id="language-category">
+
+                <div class="skill-images">
+                    <img src="assets/img/java-icon.svg" alt="Python skill">
+                    <img src="assets/img/javascript-icon.svg" alt="Django skill">
+                    <img src="assets/img/html5-icon.svg" alt="Django skill">
+                    <img src="assets/img/css3-icon.svg" alt="Django skill">
+                </div>
+            </div>
+
+            <div class="skill-category" id="frontend-category">
+
+                <div class="skill-images">
+                    <img src="assets/img/react-original-wordmark.svg" alt="Python skill">
+                    <img src="assets/img/angularjs-plain.svg" alt="Django skill">
+                    <img src="assets/img/bootstrap-plain-wordmark.svg" alt="Django skill">
+                </div>
+            </div>
+
+            <div class="skill-category" id="backend-category" style="display: none;">
+
+                <div class="skill-images">
+                    <img src="assets/img/nodejs-original.svg" alt="Python skill">
+                    <img src="assets/img/npm-original-wordmark.svg" alt="Django skill">
+                    <img src="assets/img/spring-original-wordmark.svg" alt="Node.js skill">
+                    <img src="assets/img/tomcat-line-wordmark.svg" alt="Node.js skill">
+                </div>
+            </div>
+
+            <div class="skill-category" id="tools-category" style="display: none;">
+
+                <div class="skill-images">
+                    <img src="assets/img/git-plain.svg" alt="Git skill">
+                    <img src="assets/img/figma-plain.svg" alt="Visual Studio Code skill">
+                    <img src="assets/img/intellij-idea.svg" alt="Figma skill">
+                    <img src="assets/img/vscode-plain.svg" alt="Figma skill">
+                </div>
+            </div>
         </div>
+<!--        <div class="skill_container">-->
+<!--            <p class="skill_git">Git</p>-->
+<!--            <p class="skill_hibernate">Hibernate</p>-->
+<!--            <p class="skill_figma">Figma</p>-->
+<!--            <p class="skill_opencv">OpenCV</p>-->
+<!--            <p class="skill_mysql">MySQL</p>-->
+<!--        </div>-->
+<!--        <div class="main_skills">-->
+<!--            <img src="assets/img/java-icon.svg" alt="java">-->
+<!--            <img src="assets/img/javascript-icon.svg" alt="javascript">-->
+<!--            <img src="assets/img/html5-icon.svg" alt="html5">-->
+<!--            <img src="assets/img/css3-icon.svg" alt="css">-->
+<!--        </div>-->
     </section>
 
     <!-- projects section -->
@@ -379,7 +438,7 @@
                     <span class="input-border"></span>
                     <br>
                 </div>
-                <button type="button" onclick="sendMail()">
+                <button class="contact_btn" type="button" onclick="sendMail()">
                     <span>Send</span>
                     <div class="svg-wrapper-1">
                         <div class="svg-wrapper">
