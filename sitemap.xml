@@ -4,12 +4,17 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
     <url>
-        <loc>https://viniduminsara.tech/</loc>
-        <lastmod>2024-01-25T07:00:47+00:00</lastmod>
+        <loc>https://viniduminsara.me/</loc>
+        <lastmod>2024-01-29T17:41:26+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://viniduminsara.me/project.html</loc>
+        <lastmod>2024-01-29T17:41:26+01:00</lastmod>
+        <priority>0.5</priority>
     </url>
 
 
