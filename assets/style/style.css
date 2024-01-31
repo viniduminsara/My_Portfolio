@@ -455,7 +455,9 @@ span.typed-cursor {
     }
 }
 
-.heading > div {
+.heading > h1 {
+    margin: 0;
+    padding: 0;
     color: var(--dark-text);
     font-size: 88px;
     font-weight: 700;
