@@ -1,5 +1,4 @@
 # Resources of this Web site
-
 ### Requirement document
 
 https://docs.google.com/document/d/1SUh8-3_-PcAIuWzMUMsXvKvCDXgUQiJUhTJCxJTbTFY/edit?usp=sharing
