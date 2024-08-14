@@ -976,7 +976,7 @@ span.typed-cursor {
 
 .project_panel_row:first-child .project_card:nth-child(2){
     width: 488px;
-    background-image: url("../img/project_2.svg");
+    background-image: url("../img/skycast_home.svg");
 }
 
 .project_panel_row:nth-child(2) .project_card:first-child{

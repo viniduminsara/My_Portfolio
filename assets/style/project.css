@@ -246,7 +246,7 @@ main{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 25px 0;
+    margin: 50px 0;
 }
 
 .project_container:nth-child(2n){
@@ -273,7 +273,7 @@ main{
     font-size: 18px;
     font-weight: 200;
     line-height: 120%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .project_col a img{
@@ -294,6 +294,16 @@ main{
 
 .project_container:nth-child(2n) > .project_col > h2{
     right: 55%;
+}
+
+.project_skill_container{
+    display: block;
+    margin-bottom: 20px;
+}
+.project_skill_container img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 footer{
@@ -420,6 +430,16 @@ footer{
         width: inherit;
         height: inherit;
     }
+
+    .project_skill_container{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .project_skill_container img{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
 }
 
 @media all and (max-width: 1150px){
@@ -447,6 +467,16 @@ footer{
     .footer_col2 > p{
         font-size: 20px;
         line-height: 28px;
+    }
+
+    .project_skill_container{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .project_skill_container img{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
     }
 }
 
@@ -507,6 +537,16 @@ footer{
 
     .footer_col2 > div > a:first-child{
         margin-left: 0;
+    }
+
+    .project_skill_container{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .project_skill_container img{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
     }
 }
 
@@ -575,6 +615,16 @@ footer{
         font-size: 16px;
     }
 
+    .project_skill_container{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .project_skill_container img{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
 }
 
 @media all and (max-width: 610px){
@@ -603,6 +653,16 @@ footer{
     .footer_col2 > p{
         font-size: 18px;
         line-height: 24px;
+    }
+
+    .project_skill_container{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .project_skill_container img{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
     }
 
 }
@@ -696,6 +756,16 @@ footer{
         font-size: 12px;
         line-height: 18px;
     }
+
+    .project_skill_container{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .project_skill_container img{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
 }
 
 @media all and (max-width: 320px) {
@@ -703,5 +773,15 @@ footer{
     .project_col img{
         width: 250px;
         height: 200px;
+    }
+
+    .project_skill_container{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .project_skill_container img{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
     }
 }
